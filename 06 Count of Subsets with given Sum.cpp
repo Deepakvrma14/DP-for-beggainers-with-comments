@@ -29,7 +29,9 @@ int CountSubsets(int arr[], int n, int sum) {
 	return t[n][sum]; // finally return the last row and last column element 
 }
 
-signed main() {
+
+
+int main() {
 	int n; cin >> n;
 	int arr[n];
 	for (int i = 0; i < n; i++)
