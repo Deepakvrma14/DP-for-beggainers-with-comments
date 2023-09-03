@@ -39,7 +39,7 @@ int CountSubsetsWithDiff(int arr[], int n, int diff) {
 		return CountSubsetsWithSum(arr, n, (sumOfArray + diff) / 2);// we will get the number of array(subset) with particular sum 
 }
 
-signed main() {
+int main() {
 	int n; cin >> n;
 	int arr[n];
 	for (int i = 0; i < n; i++)
@@ -49,3 +49,6 @@ signed main() {
 	cout << CountSubsetsWithDiff(arr, n, diff) << endl;
 	return 0;
 }
+
+
+
