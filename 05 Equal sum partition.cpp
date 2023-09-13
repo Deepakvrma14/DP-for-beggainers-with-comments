@@ -16,6 +16,8 @@ bool isSubsetPossible(int arr[], int n, int sum) {
 				t[i][j] = true;
 		}
 	}
+
+	
 	
 // start from 1 since 1st row and column is already considerd 
 	for (int i = 1; i <= n; i++) {
