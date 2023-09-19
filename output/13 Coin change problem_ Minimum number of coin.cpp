@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define INF INT_MAX-1
+#define INF -1
 
 int getMinNumberOfCoins(int coins[], int n, int sum) {
 	int t[n + 1][sum + 1];
