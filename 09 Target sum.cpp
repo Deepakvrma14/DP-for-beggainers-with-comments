@@ -3,8 +3,8 @@ class Solution {
 public:
    int CountSubsetsWithSum(vector<int>& nums,int sum) {
        int n= nums.size();
-	int t[n + 1][sum + 1]; // DP - matrix
-	// initialization
+	int t[n + 1][sum + 1]; 
+	
 	t[0][0] = 1;
 	int k = 1;
 	for (int i = 0; i <= n; i++) {

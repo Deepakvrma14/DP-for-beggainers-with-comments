@@ -28,7 +28,7 @@ int CountSubsetsWithSum(int arr[], int n, int sum) {
 	return t[n][sum]; // finally return the last row and last column element 
 }
 
-int CountSubsetsWithDiff(int arr[], int n, int diff) {
+ int CountSubsetsWithDiff(int arr[], int n, int diff) {
 	int sumOfArray = 0;
 	for (int i = 0; i < n; i++)
 		sumOfArray += arr[i]; // taking sum of the array 
