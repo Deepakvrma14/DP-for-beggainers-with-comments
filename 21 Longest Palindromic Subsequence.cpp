@@ -33,3 +33,38 @@ signed main() {
 	cout << LPS(X, n) << endl;
 	return 0;
 }
+
+
+leetcode:
+class Solution {
+public:
+    int longestPalindromeSubseq(string s) {
+        int n = s.length();
+        string t ="";
+        for(int i = n ; i>=0; i--){
+            t.push_back(s[i]);
+        }
+
+        int m  = t.length();
+        int d[n+1][m+1];
+
+        for(int i = 0 ;i<=n;i++){
+            for(int j=0;j<=m;j++){
+                if(i==0 || j==0){
+                    d[i][j] = 0;
+                }
+            }
+        }
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=m;j++){
+                if(s[i-1] == t[j-1]){
+                    d[i][j] = d[i-1][j-1] +1;
+                }else{
+                    d[i][j] = max(d[i-1][j] , d[i][j-1]);
+                }
+            }
+        }
+        return d[n][m];
+
+    }
+};
