@@ -13,12 +13,41 @@ int LCS(string X, string Y, int n, int m) {
 	// when both string's last character is not same 
 	else
 		return max(LCS(X, Y, n - 1, m), LCS(X, Y, n, m - 1)); // one take full and another by leaving last and vice versa 
+	
+
+
 }
+
+
+int minDistance(string s, string r) {
+        int n=s.length();
+        int m=r.length();
+		
+		int lcs = LCS(s,r, n,m);
+        int insert = 0;
+        int del=0;
+        int replace=0;
+        
+        // insertions
+        if(n<m){
+            insert = m-n;
+        }
+        // deletions
+        if(n>m){
+            del = n-m;
+        }
+        // replacements
+        replace = m-lcs;
+
+        return insert+del+replace;
+        
+
+    }
 
 int main() {
 	string X, Y; cin >> X >> Y;
 	int n = X.length(), m = Y.length();
 
-	cout << LCS(X, Y, n, m) << endl;
+	cout << minDistance(X, Y) << endl;
 	return 0;
 }
